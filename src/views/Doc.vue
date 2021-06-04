@@ -34,6 +34,10 @@
         </p>
 
         <p class="font-weight-light ma-4 paragraph">
+          Since the application uses a VueJS environment variable (prefixed with "VUE_APP_") to store the address of the backend REST API, it will be necessary to create said .env file or configure the variable "VUE_APP_ADDRESS_BACKEND" on the server.
+        </p>
+
+        <p class="font-weight-light ma-4 paragraph">
           In some servers it may be necessary to create a <i>404.html</i> with the same content as the <i>index.html</i> so that it does not give us an error when doing a fallback in the browser. This <i>404.html</i> file is created automatically when compiling the application.
         </p>
 
