@@ -28,7 +28,7 @@
     width: 9rem;
     height: 9rem;
     border-radius: 50%;
-    background: radial-gradient(farthest-corner at 1rem 1rem , #3eff04 15%, #147aee 55%);
+    background: radial-gradient(farthest-corner at -18px -18px , #3eff04 12%, #073f80 70%, #1a1a1a 88%);
     right: 1rem;
     bottom: 4rem;
   }
@@ -39,7 +39,7 @@
     width: 12rem;
     height: 12rem;
     border-radius: 50%;
-    background: radial-gradient(farthest-corner at 12rem 12rem , #e5ff00 10%, #7e00c7 60%);
+    background: radial-gradient(farthest-corner at 12rem 12rem , #e5ff00 10%, #7e00c7 60%, #1a1a1a 88%);
     left: -0.5rem;
     top: -0.1px;
   }

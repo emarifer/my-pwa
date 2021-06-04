@@ -7,16 +7,16 @@
           Notes App with VueJS & MongoDB Atlas
         </h1>
         <p class="font-weight-light mx-4 paragraph">
-          <i>Progressive Web Application</i> (PWA) to create notes developed with VueJS, authentication and use of MongoDB Atlas.
+          <i>Progressive Web Application</i> (PWA) developed with VueJS to create notes, and using authentication and MongoDB Atlas.
         </p>
         <hr class="mx-4">
         <p class="font-weight-light mx-4 my-4 paragraph">
-          Developers can visit the documentation page to install the application on a server.            
+          Developers can visit the documentation page to deploy the application on a server.            
         </p>
-        <p class="font-weight-light mx-4 paragraph">Look and/or download the application code from <a id="link-color" href="https://github.com/emarifer/my-pwa-code" target="_blank" rel="noopener noreferrer">here</a>.
+        <p class="font-weight-light mx-4 paragraph">Look and/or download the application code from <a id="link-color" href="https://github.com/emarifer/my-pwa" target="_blank" rel="noopener noreferrer">here</a>.
         </p>
         <v-card-actions>
-          <a class="mx-auto" id="link-color" href="https://emarifer.github.io/curriculum/" target="_blank" rel="noopener noreferrer">
+          <a class="mx-auto" id="link-color" href="https://emarifer-landing-page.netlify.app/" target="_blank" rel="noopener noreferrer">
             My Site
           </a>              
         </v-card-actions>

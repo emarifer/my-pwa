@@ -9,14 +9,14 @@
         <hr class="mx-4">
         
         <p class="font-weight-light ma-4 paragraph">
-          <i>Progressive Web Application</i> (PWA) to create notes developed with VueJS.
+          <i>Progressive Web Application</i> (PWA) developed with VueJS to create notes.
         </p>
         <p class="font-weight-light ma-4 paragraph">Deployment in production:</p>
         
         <p class="font-weight-light mx-4 paragraph">In the first place, for the app to work it is necessary that a REST API is also deployed as a backend of this application. Said backend can be viewed and/or downloaded from <a id="link-color" href="https://github.com/emarifer/my-pwa-backend" target="_blank" rel="noopener noreferrer">here</a>.</p>
 
         <p class="font-weight-light ma-4 paragraph">
-          To install the My PWA backend it is prerequisite to have installed nodejs. Also, an .env file is required that stores the environment variables corresponding to the database credentials in MongoDB Atlas. Likewise, in this file it is necessary to create the SECRET variable to store the secret key with which the backend digitally signs the JSON WEB TOKEN:
+          To install the My PWA backend it is prerequisite to have installed NodeJS. Also, an .env file is required that stores the environment variables corresponding to the database credentials in MongoDB Atlas. Likewise, in this file it is necessary to create the SECRET variable to store the secret key with which the backend digitally signs the JSON WEB TOKEN (on some servers this file is not necessary because environment variables can be set manually when deploying the application):
         </p>
         
         <Code :code="code_1" />
@@ -30,16 +30,16 @@
         <Code :code="code_3" />
 
         <p class="font-weight-light ma-4 paragraph">
-          Once this is done we will deploy the application on a static file server.
+          Once this is done we will deploy the application. For this purpose, a statics file server can be used.
         </p>
 
         <p class="font-weight-light ma-4 paragraph">
-          In some servers it may be necessary to create a <i>404.html</i> with the same content as the <i>index.html</i> so that it does not give us an error when doing a fallback in the browser.
+          In some servers it may be necessary to create a <i>404.html</i> with the same content as the <i>index.html</i> so that it does not give us an error when doing a fallback in the browser. This <i>404.html</i> file is created automatically when compiling the application.
         </p>
 
         <p class="font-weight-light ma-4 paragraph">
           Look and/or download the application code from 
-            <a id="link-color" href="https://github.com/emarifer/my-pwa-code" target="_blank" rel="noopener noreferrer">
+            <a id="link-color" href="https://github.com/emarifer/my-pwa" target="_blank" rel="noopener noreferrer">
               here
             </a>.
         </p>
@@ -60,11 +60,11 @@
     data() {
       return {
         code_1: `
-          PORT=3500 (e.g)
-          MONGODB_URI=mongodb+srv://XXXX:XXXX.4temp.mongodb.net/XXXX?retryWrites=true&w=majority
+          // PORT=3500 (e.g; on a server the port is set automatically)
+          MONGODB_URI=mongodb+srv:'//XXXX:XXXX.4temp.mongodb.net/XXXX?retryWrites=true&w=majority'
           SECRET=XXXX
 
-          // Replace 'XXXX' with the corresponding values.`,
+          // Replace 'XXXX' with the corresponding values and remove the quotes from the string MONGODB_URI.`,
         code_2: `
           npm i`,
         code_3: `
