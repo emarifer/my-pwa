@@ -5,7 +5,8 @@
       <section></section>
       <router-view />
       <v-btn
-        class="hidden"
+        v-if="showBtn"
+        @click="scrollToTop"
         id="btn-to-top"
         fab
         dark
@@ -23,9 +24,9 @@
 
   #btn-to-top {
     position: fixed;
-    z-index: 999;
-    bottom: calc(1rem + 1vh);
-    right: calc(1rem + 1vw);
+    z-index: 100;
+    bottom: 1rem; /* calc(1rem + 1vh); */
+    right: 1rem; /* calc(1rem + 1vw); */
   }
 
   #custom-background {
@@ -38,11 +39,6 @@
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(5px);
-  }
-
-  .hidden {
-    visibility: hidden;
-    opacity: 0;
   }
 
   section::before {
@@ -89,23 +85,29 @@
     components: {
       Navigation,
     },
+    data() {
+      return {
+        showBtn: false,
+      }
+    },
     mounted() {
-      const $scrollTopButton = window.document.getElementById('btn-to-top');
-      window.addEventListener('scroll', (e) => { 
-        const scrollTop = pageYOffset || window.document.documentElement.scrollTop; // Por si un navegador antiguo no detectara «pageYOffset»
+      this.detectScroll();
+    },
+    methods: {
+      detectScroll() {
+          window.addEventListener('scroll', (e) => { 
+          const scrollTop = pageYOffset || window.document.documentElement.scrollTop; // Por si un navegador antiguo no detectara «pageYOffset»
 
-        scrollTop > 300
-            ? $scrollTopButton.classList.remove('hidden')
-            : $scrollTopButton.classList.add('hidden');
-
-      });
-      $scrollTopButton.addEventListener('click', (e) => {
-        scrollTo({
-                behavior: 'smooth',
-                top: 0,
-                // left: 0 // Si hubiese barra horizontal de desplazamiento
+          this.showBtn = scrollTop > 300 ? true : false;
         });
-      });
+      },
+      scrollToTop() {
+        scrollTo({
+          behavior: 'smooth',
+          top: 0,
+          // left: 0 // Si hubiese barra horizontal de desplazamiento
+        });
+      },
     },
   };
 </script>
