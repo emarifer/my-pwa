@@ -14,7 +14,7 @@ self.addEventListener('fetch', (event) => {
   if (!self.navigator.onLine) {    
     // Clone the request to ensure it's save to read when
     // adding to the Queue.
-    if (['POST', 'PUT', 'DELETE'].some(el => event.request.method.includes(el))) {    
+    if (['POST', 'PUT', 'DELETE'].some(el => event.request.clone().method.includes(el))) {    
       const promiseChain = fetch(event.request.clone())
         .catch((err) => {
             return queue.pushRequest({request: event.request});
