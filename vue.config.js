@@ -81,6 +81,12 @@ module.exports = {
  */
 
  /**
+  * HOW TO DISABLE GOOGLE TRANSLATE FROM HTML IN CHROME (Y EXPLICACION DE PORQUE EL TRADUCTOR DE CHROME INTERFIERE EN LOS COMPONENTES DE VUE):
+  * https://stackoverflow.com/questions/12238396/how-to-disable-google-translate-from-html-in-chrome#61363117
+  * https://stackoverflow.com/questions/49563912/vue-components-stop-updating-when-page-is-translated-by-google-translate
+  */
+
+ /**
   * 
   * ANTERIOR CONFIGURACION DE VUE.CONFIG.JS:
   * 
