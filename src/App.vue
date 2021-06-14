@@ -16,7 +16,13 @@
           mdi-arrow-up-bold
         </v-icon>
       </v-btn>
-    </v-main>
+    </v-main>    
+    <v-snackbar bottom right :value="updateExists" :timeout="-1" color="grey darken-3">
+      An update is available!! 😀
+      <v-btn text @click="refreshApp">
+        Update
+      </v-btn>
+    </v-snackbar>
   </v-app>
 </template>
 
@@ -79,6 +85,7 @@
 
 <script>
   import Navigation from './components/Navigation';
+  import update from './mixins/update';
 
   export default {
     name: 'App',
@@ -90,6 +97,7 @@
         showBtn: false,
       }
     },
+    mixins: [update],
     mounted() {
       this.detectScroll();
     },
