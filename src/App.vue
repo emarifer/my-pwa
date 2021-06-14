@@ -10,7 +10,7 @@
         id="btn-to-top"
         fab
         dark
-        color="lime darken-3"
+        color="deep-purple darken-2"
       >
         <v-icon>
           mdi-arrow-up-bold
